@@ -44,7 +44,7 @@ function! unite_qf_replace#replace() abort
   let escaped_pattern = escape(search_pattern, '/\')
   " Ask the user for the replacement text
   echo "Number of items to replace: " . total_items
-  let replace_text = input('Enter the replacement text: ')
+  let replace_text = input('Enter the replacement text: ', search_pattern)
   if empty(replace_text)
     echo "No replacement text provided. Exiting."
     return
